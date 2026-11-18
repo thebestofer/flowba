@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flowba | L'IA qui travaille pour votre PME</title>
+<meta name="description" content="Flowba branche des agents IA sur vos outils actuels : réponses aux clients 24/7, prise de rendez-vous, suivi des soumissions. Pour garages, entrepreneurs et courtiers immobiliers du Québec.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020; --bg2:#111831; --card:#161f3d; --line:#26305a;
+  --text:#eef1fb; --muted:#a6afcf; --yellow:#ffd23f; --red:#ff4b3e; --green:#2fd38a;
+  --radius:18px; --max:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--yellow);color:#000;padding:8px 12px;z-index:99}
+
+/* Bandeau d'urgence (idée IMPROOV : ancrer l'offre dans une actualité) */
+.ribbon{background:var(--yellow);color:#111;font-weight:700;font-size:.93rem;text-align:center;padding:10px 16px}
+.ribbon a{font-weight:800}
+
+/* Nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-weight:900;font-size:1.45rem;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--yellow)}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+.nav ul a:hover{color:var(--text)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.lang{color:var(--muted);text-decoration:none;font-weight:700;font-size:.85rem;border:1px solid var(--line);border-radius:8px;padding:4px 8px}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 11px;font-size:1.1rem;cursor:pointer}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;text-decoration:none;border-radius:12px;padding:14px 22px;border:2px solid transparent;transition:transform .15s,background .15s;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-y{background:var(--yellow);color:#111}
+.btn-r{background:var(--red);color:#fff}
+.btn-o{border-color:var(--line);color:var(--text);background:transparent}
+.btn-sm{padding:10px 16px;font-size:.9rem}
+
+section{padding:88px 0}
+.eyebrow{display:inline-block;color:var(--yellow);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin-bottom:12px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0 0 16px}
+h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:900}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:900}
+h3{font-size:1.25rem;font-weight:800}
+.lead{font-size:1.15rem;color:var(--muted);max-width:640px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.hl-y{color:var(--yellow)}.hl-r{color:var(--red)}
+
+/* Hero */
+.hero{padding:72px 0 64px;background:radial-gradient(900px 500px at 85% 0%,rgba(255,75,62,.18),transparent 60%),radial-gradient(800px 500px at 0% 30%,rgba(255,210,63,.12),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.chips li{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.88rem;color:var(--muted);font-weight:600}
+.chips li b{color:var(--text)}
+.video-card{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45);background:#000;aspect-ratio:16/9}
+.video-card video{width:100%;height:100%;object-fit:cover}
+.video-tag{position:absolute;left:14px;top:14px;background:var(--red);color:#fff;font-weight:800;font-size:.75rem;padding:5px 10px;border-radius:8px;text-transform:uppercase;letter-spacing:.06em}
+
+/* Douleurs */
+.pains{background:var(--bg2)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.card p{color:var(--muted);margin:0}
+.pain .big{font-size:2.4rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:10px}
+
+/* Métiers (idée IMPROOV : segmenter par public) */
+.trade{display:flex;flex-direction:column}
+.trade .icon{font-size:2.2rem;margin-bottom:12px}
+.trade ul{padding-left:18px;color:var(--muted);margin:14px 0 22px}
+.trade ul li{margin-bottom:6px}
+.trade .btn{margin-top:auto}
+
+/* Solutions */
+.sol h3{display:flex;align-items:center;gap:10px}
+.sol .tag{font-size:.72rem;background:rgba(255,210,63,.14);color:var(--yellow);padding:3px 8px;border-radius:6px;font-weight:800;text-transform:uppercase}
+.channels{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.channels span{font-size:.78rem;border:1px solid var(--line);border-radius:8px;padding:3px 8px;color:var(--muted)}
+
+/* Vos vrais outils */
+.tools{background:var(--bg2)}
+.tools .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.checks{list-style:none;padding:0;margin:22px 0 0}
+.checks li{padding-left:34px;position:relative;margin-bottom:14px;color:var(--muted)}
+.checks li b{color:var(--text)}
+.checks li::before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:rgba(47,211,138,.15);color:var(--green);display:grid;place-items:center;font-weight:900;font-size:.85rem}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.logos div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 10px;text-align:center;font-weight:700;color:var(--muted);font-size:.92rem}
+
+/* Méthode */
+.steps{counter-reset:s}
+.step{position:relative;padding-top:80px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:22px;left:28px;width:40px;height:40px;border-radius:12px;background:var(--yellow);color:#111;font-weight:900;display:grid;place-items:center}
+.step .when{font-size:.8rem;color:var(--yellow);font-weight:800;text-transform:uppercase;letter-spacing:.08em;display:block;margin:6px 0 8px}
+
+/* Forfaits (idée IMPROOV : une offre phare mise en valeur) */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.plan{display:flex;flex-direction:column}
+.plan.star{border:2px solid var(--yellow);position:relative;transform:translateY(-8px)}
+.plan.star::before{content:"Le plus populaire";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--yellow);color:#111;font-weight:900;font-size:.75rem;padding:5px 12px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+.price{font-size:1.9rem;font-weight:900;margin:8px 0 2px}
+.price small{font-size:.9rem;color:var(--muted);font-weight:600}
+.plan ul{list-style:none;padding:0;margin:18px 0 24px}
+.plan ul li{padding-left:24px;position:relative;margin-bottom:9px;color:var(--muted);font-size:.95rem}
+.plan ul li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+.plan .btn{margin-top:auto}
+.compare{margin-top:28px;text-align:center;color:var(--muted);font-size:.95rem}
+.compare b{color:var(--text)}
+
+/* Financement */
+.fund{background:linear-gradient(135deg,rgba(255,210,63,.1),rgba(255,75,62,.08));border:1px solid var(--line);border-radius:24px;padding:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.fine{font-size:.82rem;color:var(--muted);margin-top:14px}
+
+/* Témoignages */
+.quote{font-size:1.05rem}
+.quote p{color:var(--text)!important;font-style:italic}
+.quote .who{margin-top:18px;font-size:.9rem;color:var(--muted);font-style:normal}
+.pilot{border-style:dashed}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+.faq summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--yellow);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--muted);margin:12px 0 0}
+
+/* Contact (idée IMPROOV : deux portes d'entrée) */
+.contact{background:var(--bg2)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+form{display:grid;gap:14px}
+label{font-weight:700;font-size:.9rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--yellow);border-color:transparent}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.direct a{display:flex;gap:12px;align-items:center;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;font-weight:700}
+.direct a span{font-size:1.4rem}
+.direct a small{display:block;color:var(--muted);font-weight:500}
+
+/* CTA final */
+.final{text-align:center;padding:96px 0;background:radial-gradient(700px 400px at 50% 100%,rgba(255,75,62,.22),transparent 70%)}
+.final .hero-ctas{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:48px 0 30px;color:var(--muted);font-size:.92rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:28px}
+footer h4{color:var(--text);margin:0 0 12px;font-size:.95rem}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--text)}
+.news{display:flex;gap:8px}
+.news input{padding:10px 12px}
+.legal{max-width:var(--max);margin:30px auto 0;padding:20px 20px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.82rem}
+
+@media (max-width:960px){
+  .hero .wrap,.tools .wrap,.contact .wrap,.fund{grid-template-columns:1fr}
+  .grid3,.plans{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+  .plan.star{transform:none}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px;border-bottom:1px solid var(--line);gap:16px}
+  .nav ul.open{display:flex}
+  .burger{display:block}
+  .nav-cta .btn{display:none}
+}
+@media (max-width:560px){
+  section{padding:64px 0}
+  .wrap{padding:0 16px}
+  .grid4,.row2,footer .wrap,.logos{grid-template-columns:1fr 1fr}
+  .grid4,.row2,footer .wrap{grid-template-columns:1fr}
+  .fund{padding:26px}
+  .hero-ctas .btn{width:100%}
+  .news{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<div class="ribbon">
+  🎁 Ce mois-ci : <strong>diagnostic IA gratuit de 30 minutes</strong> pour les garages, entrepreneurs et courtiers. <a href="#contact">Réservez votre place →</a>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Flowba<span>.io</span></a>
+    <ul id="menu">
+      <li><a href="#metiers">Pour qui</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#methode">Comment ça marche</a></li>
+      <li><a href="#forfaits">Forfaits</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="lang" href="#" title="English version (à venir)">EN</a>
+      <a class="btn btn-y btn-sm" href="#contact">Diagnostic gratuit</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+<!-- 1. HERO : promesse courte + preuves + un seul CTA principal -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">IA et automatisation pour PME du Québec</span>
+      <h1>Arrêtez de perdre des clients <span class="hl-y">pendant que vous travaillez.</span></h1>
+      <p class="lead">Flowba branche un agent IA sur vos outils actuels. Il répond à vos clients 24/7, prend les rendez-vous et relance les soumissions. Vous, vous restez sous le char, sur le chantier ou en visite.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-y" href="#contact">Réserver mon diagnostic gratuit</a>
+        <a class="btn btn-o" href="#solutions">Voir ce que ça fait</a>
+      </div>
+      <ul class="chips">
+        <li><b>24/7</b> réponses aux clients</li>
+        <li><b>En français</b> d'ici</li>
+        <li><b>Vos outils</b> restent en place</li>
+        <li><b>Pilote</b> avant d'investir gros</li>
+      </ul>
+    </div>
+    <div class="video-card">
+      <span class="video-tag">▶ 1 minute</span>
+      <video src="assets/flowba-promo.mp4" controls playsinline preload="metadata" poster="assets/flowba-promo-poster.jpg" aria-label="Vidéo de présentation de Flowba"></video>
+    </div>
+  </div>
+</section>
+
+<!-- 2. DOULEURS : nommer le problème avant la solution -->
+<section class="pains">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Ça vous dit quelque chose?</span>
+      <h2>Votre téléphone sonne. <span class="hl-r">Vous ne pouvez pas répondre.</span></h2>
+      <p class="lead">Le client n'attend pas. Il appelle le suivant. Et le soir, vous passez une heure à rattraper les messages.</p>
+    </div>
+    <div class="grid3" style="margin-top:44px">
+      <div class="card pain"><div class="big">📞</div><h3>Appels manqués</h3><p>Les mains pleines de graisse ou sur un toit, vous ne pouvez pas décrocher. Chaque appel manqué peut être un client perdu.</p></div>
+      <div class="card pain"><div class="big">💬</div><h3>Messages éparpillés</h3><p>Messenger, SMS, courriel, WhatsApp : les demandes arrivent partout et certaines tombent entre deux chaises.</p></div>
+      <div class="card pain"><div class="big">⏰</div><h3>Soirées de paperasse</h3><p>Confirmer les rendez-vous, relancer les soumissions, mettre l'agenda à jour… après une journée complète.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. POUR QUI : un parcours par métier -->
+<section id="metiers">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Pour qui</span>
+      <h2>Bâti pour votre métier, pas pour une multinationale.</h2>
+      <p class="lead">On commence par ce qui vous coûte le plus de temps dans <em>votre</em> journée.</p>
+    </div>
+    <div class="grid3" style="margin-top:44px">
+      <article class="card trade">
+        <div class="icon">🔧</div>
+        <h3>Garages et ateliers</h3>
+        <p>Vos clients veulent un prix, une disponibilité, un rendez-vous. Tout de suite.</p>
+        <ul>
+          <li>Réponses aux questions courantes (heures, services, délais)</li>
+          <li>Prise de rendez-vous et rappels automatiques</li>
+          <li>Avis « votre auto est prête » par texto</li>
+        </ul>
+        <a class="btn btn-o" href="#contact" data-metier="Garage">Parler de mon garage</a>
+      </article>
+      <article class="card trade">
+        <div class="icon">🏗️</div>
+        <h3>Entrepreneurs et rénovation</h3>
+        <p>Vous êtes sur le chantier pendant que les demandes de soumission s'empilent.</p>
+        <ul>
+          <li>Qualification des demandes (type de travaux, budget, délai)</li>
+          <li>Visites d'estimation ajoutées à votre agenda</li>
+          <li>Relance automatique des soumissions envoyées</li>
+        </ul>
+        <a class="btn btn-o" href="#contact" data-metier="Entrepreneur">Parler de mes chantiers</a>
+      </article>
+      <article class="card trade">
+        <div class="icon">🏡</div>
+        <h3>Courtiers immobiliers</h3>
+        <p>Un prospect qui attend deux heures, c'est un prospect qui appelle un autre courtier.</p>
+        <ul>
+          <li>Réponse instantanée aux demandes sur vos inscriptions</li>
+          <li>Prise de rendez-vous pour les visites</li>
+          <li>Suivi des acheteurs et vendeurs dans votre CRM</li>
+        </ul>
+        <a class="btn btn-o" href="#contact" data-metier="Courtier immobilier">Parler de mes inscriptions</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SOLUTIONS -->
+<section id="solutions" class="pains">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Solutions</span>
+      <h2>Quatre agents. Un seul objectif : <span class="hl-y">plus de clients, moins de stress.</span></h2>
+    </div>
+    <div class="grid4" style="margin-top:44px">
+      <div class="card sol"><h3>💬 Agent service client</h3><p>Répond jour et nuit avec <b>vos</b> informations : heures, services, politiques. Passe la main à un humain quand c'est nécessaire.</p><div class="channels"><span>Messenger</span><span>SMS</span><span>WhatsApp</span><span>Site web</span></div></div>
+      <div class="card sol"><h3>🎯 Agent ventes</h3><p>Qualifie les prospects, répond aux questions sur vos produits et services, et amène le client à la prochaine étape.</p></div>
+      <div class="card sol"><h3>📅 Rendez-vous automatiques</h3><p>Réserve, confirme, rappelle. Votre agenda reste à jour sans que vous y touchiez.</p></div>
+      <div class="card sol"><h3>🔗 Flux connectés</h3><p>Relie votre CRM, votre agenda, votre boutique et vos outils pour que l'information circule toute seule.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. VOS VRAIS OUTILS (inspiré de « vos vrais dossiers ») -->
+<section class="tools">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Pas de nouveau logiciel à apprendre</span>
+      <h2>On branche l'IA sur <span class="hl-y">vos vrais outils.</span></h2>
+      <p class="lead">Vous gardez votre agenda, votre CRM et vos habitudes. Flowba travaille par-dessus.</p>
+      <ul class="checks">
+        <li><b>Données réelles seulement.</b> Les prix, disponibilités et dossiers viennent de vos systèmes. L'IA n'invente rien.</li>
+        <li><b>Un humain au besoin.</b> Les cas délicats vous sont transférés avec tout le contexte.</li>
+        <li><b>Vous gardez le contrôle.</b> Vous voyez chaque conversation et pouvez ajuster les réponses.</li>
+      </ul>
+    </div>
+    <div class="logos" aria-label="Exemples d'outils compatibles">
+      <div>Google Agenda</div><div>Outlook</div><div>Messenger</div>
+      <div>WhatsApp</div><div>SMS</div><div>Gmail</div>
+      <div>HubSpot</div><div>Shopify</div><div>Votre CRM</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MÉTHODE en 3 étapes -->
+<section id="methode">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Comment ça marche</span>
+      <h2>Simple, rapide, sans risque.</h2>
+      <p class="lead">On commence petit, on mesure, et on grandit seulement si ça rapporte.</p>
+    </div>
+    <div class="grid3 steps" style="margin-top:44px">
+      <div class="card step"><h3>Diagnostic gratuit</h3><span class="when">30 minutes</span><p>On regarde ensemble où vous perdez du temps et des clients. Vous repartez avec 2 ou 3 idées concrètes, même si vous ne faites pas affaire avec nous.</p></div>
+      <div class="card step"><h3>Projet pilote</h3><span class="when">Quelques semaines</span><p>On met en place un premier agent sur un seul problème clé, branché sur vos outils. On mesure les résultats.</p></div>
+      <div class="card step"><h3>On grandit ensemble</h3><span class="when">Quand ça rapporte</span><p>Si les résultats sont là, on ajoute d'autres agents. Sinon, vous n'êtes pas pris avec un gros contrat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FORFAITS : une offre phare mise en avant -->
+<!-- NOTE POUR BAT : remplace « Sur soumission » par tes vrais prix quand ils sont fixés. -->
+<section id="forfaits" class="pains">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Forfaits</span>
+      <h2>Un prix clair. Pas de surprise.</h2>
+      <p class="lead">Mise en place, puis un montant mensuel fixe. Les frais de tiers (textos, téléphonie) sont indiqués à part.</p>
+    </div>
+    <div class="plans" style="margin-top:52px">
+      <div class="card plan">
+        <h3>Départ</h3>
+        <p>Pour tester l'IA sur un seul canal.</p>
+        <div class="price">Sur soumission</div>
+        <ul>
+          <li>1 agent service client</li>
+          <li>1 canal (Messenger, SMS ou site web)</li>
+          <li>Réponses basées sur vos infos</li>
+          <li>Rapport mensuel</li>
+        </ul>
+        <a class="btn btn-o" href="#contact">Demander un prix</a>
+      </div>
+      <div class="card plan star">
+        <h3>Croissance</h3>
+        <p>Le combo qui ne laisse filer aucun client.</p>
+        <div class="price">Sur soumission</div>
+        <ul>
+          <li>Agent service client + ventes</li>
+          <li>Tous vos canaux de messagerie</li>
+          <li>Prise de rendez-vous et rappels</li>
+          <li>Relance des soumissions</li>
+          <li>Ajustements mensuels inclus</li>
+        </ul>
+        <a class="btn btn-y" href="#contact">Réserver mon diagnostic</a>
+      </div>
+      <div class="card plan">
+        <h3>Sur mesure</h3>
+        <p>Pour les entreprises avec plusieurs équipes ou outils.</p>
+        <div class="price">Sur soumission</div>
+        <ul>
+          <li>Plusieurs agents et flux</li>
+          <li>Intégration CRM / boutique</li>
+          <li>Tableau de bord des résultats</li>
+          <li>Accompagnement prioritaire</li>
+        </ul>
+        <a class="btn btn-o" href="#contact">Parler de mon projet</a>
+      </div>
+    </div>
+    <p class="compare">💡 À comparer avec le coût d'une réceptionniste à temps plein, ou d'<b>un seul client perdu</b> par semaine.</p>
+  </div>
+</section>
+
+<!-- 8. FINANCEMENT / RÉASSURANCE -->
+<section>
+  <div class="wrap">
+    <div class="fund">
+      <div>
+        <span class="eyebrow">Bon à savoir</span>
+        <h2>Votre projet pourrait être en partie financé.</h2>
+        <p class="lead">Des programmes d'aide au virage numérique existent pour les PME du Québec. Pendant le diagnostic, on vous indique lesquels vérifier et on vous fournit une description de projet claire pour votre demande.</p>
+        <p class="fine">Flowba ne garantit aucune aide financière. L'admissibilité est déterminée par les organismes qui gèrent ces programmes.</p>
+      </div>
+      <div>
+        <ul class="checks">
+          <li><b>Soumission détaillée</b> et facture claire</li>
+          <li><b>Aucun engagement long terme</b> pour le pilote</li>
+          <li><b>Vos données restent à vous</b></li>
+          <li><b>Service en français</b>, ici au Québec</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. TÉMOIGNAGES -->
+<!-- NOTE POUR BAT : remplacer les cartes par de vrais témoignages (nom, métier, ville) dès qu'ils sont disponibles. Ne jamais inventer. -->
+<section class="pains">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Témoignages</span>
+      <h2>Leurs résultats parlent mieux que nous.</h2>
+    </div>
+    <div class="grid3" style="margin-top:44px">
+      <div class="card quote pilot"><h3>🔧 Garage</h3><p>Témoignage à venir.</p><div class="who">Premier projet pilote en cours</div></div>
+      <div class="card quote pilot"><h3>🏗️ Entrepreneur</h3><p>Votre entreprise ici?</p><div class="who">Places pilotes disponibles</div></div>
+      <div class="card quote pilot"><h3>🏡 Courtier</h3><p>Votre entreprise ici?</p><div class="who">Places pilotes disponibles</div></div>
+    </div>
+    <p class="compare">Les premières entreprises pilotes obtiennent un <b>tarif fondateur</b> en échange d'un témoignage honnête. <a href="#contact">Je veux une place →</a></p>
+  </div>
+</section>
+
+<!-- 10. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">FAQ</span>
+      <h2>Vos questions, nos réponses.</h2>
+    </div>
+    <div class="faq" style="margin-top:40px">
+      <details><summary>Je ne suis pas bon avec la technologie. Est-ce pour moi?</summary><p>Oui. C'est justement notre travail. On s'occupe de toute la mise en place. Vous, vous nous dites comment vous travaillez et vous validez les réponses.</p></details>
+      <details><summary>Est-ce que je dois changer mes logiciels?</summary><p>Non. Flowba se branche sur ce que vous utilisez déjà : agenda, Messenger, SMS, CRM, site web.</p></details>
+      <details><summary>Et si l'IA dit n'importe quoi à mon client?</summary><p>L'agent répond seulement à partir de vos informations. Les prix, disponibilités et dossiers viennent de vos systèmes. Quand il n'est pas sûr, il transfère à un humain.</p></details>
+      <details><summary>Combien de temps avant que ce soit en marche?</summary><p>Un premier pilote simple peut être en place en quelques semaines, selon vos outils et le nombre de canaux.</p></details>
+      <details><summary>Est-ce que ça parle français québécois?</summary><p>Oui, et anglais aussi. L'agent s'adapte à la langue du client et au ton de votre entreprise.</p></details>
+      <details><summary>Combien ça coûte?</summary><p>Une mise en place, puis un montant mensuel fixe. Le diagnostic gratuit sert justement à vous donner un prix précis pour votre situation.</p></details>
+      <details><summary>Qu'arrive-t-il à mes données?</summary><p>Elles restent à vous. On utilise uniquement ce qui est nécessaire pour répondre à vos clients, et vous pouvez tout récupérer en tout temps.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. CONTACT : deux portes d'entrée -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Parlons-en</span>
+      <h2>Réservez votre diagnostic IA gratuit.</h2>
+      <p class="lead">30 minutes, sans engagement. Vous repartez avec des idées concrètes pour sauver du temps dès cette semaine.</p>
+      <div class="direct" style="margin-top:26px">
+        <a href="tel:+15148235029"><span>📞</span><div>514 823-5029<small>Appelez ou textez-nous</small></div></a>
+        <a href="mailto:thebestofer@gmail.com?subject=Diagnostic%20IA%20gratuit"><span>✉️</span><div>Écrivez-nous<small>Réponse en 1 jour ouvrable</small></div></a>
+        <a href="https://wa.me/15148235029" target="_blank" rel="noopener"><span>🟢</span><div>WhatsApp<small>Pour une réponse rapide</small></div></a>
+      </div>
+    </div>
+    <form class="card" id="form" novalidate>
+      <div class="row2">
+        <label>Prénom<input name="prenom" required autocomplete="given-name"></label>
+        <label>Nom<input name="nom" autocomplete="family-name"></label>
+      </div>
+      <div class="row2">
+        <label>Courriel<input type="email" name="courriel" required autocomplete="email"></label>
+        <label>Téléphone<input type="tel" name="tel" autocomplete="tel"></label>
+      </div>
+      <label>Entreprise<input name="entreprise" autocomplete="organization"></label>
+      <label>Votre métier
+        <select name="metier" id="metier">
+          <option>Garage</option><option>Entrepreneur</option><option>Courtier immobilier</option><option>Autre</option>
+        </select>
+      </label>
+      <label>Qu'est-ce qui vous fait perdre le plus de temps?<textarea name="besoin" rows="4" placeholder="Ex. : je manque des appels quand je suis sous un char…"></textarea></label>
+      <button class="btn btn-y" type="submit">Réserver mon diagnostic gratuit</button>
+      <p class="fine" style="margin:0">Vos renseignements servent uniquement à vous recontacter. Ils ne sont jamais vendus.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 12. CTA FINAL -->
+<section class="final">
+  <div class="wrap">
+    <h2>Le prochain client qui appelle,<br><span class="hl-y">qui va lui répondre?</span></h2>
+    <p class="lead">Avec Flowba, quelqu'un répond. Toujours.</p>
+    <div class="hero-ctas"><a class="btn btn-y" href="#contact">Réserver mon diagnostic gratuit</a><a class="btn btn-o" href="tel:+15148235029">514 823-5029</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#">Flowba<span>.io</span></a>
+      <p>L'IA qui travaille pendant que vous travaillez. Automatisation pour les PME du Québec.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul><li><a href="#metiers">Pour qui</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#forfaits">Forfaits</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Suivez-nous</h4>
+      <ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="https://wa.me/15148235029">WhatsApp</a></li></ul>
+    </div>
+    <div>
+      <h4>Une astuce IA par mois</h4>
+      <p>Des idées concrètes pour sauver du temps dans votre PME. Pas de spam.</p>
+      <form class="news" onsubmit="event.preventDefault();location.href='mailto:thebestofer@gmail.com?subject=Infolettre%20Flowba&body='+encodeURIComponent('Inscrivez-moi : '+this.e.value)">
+        <input type="email" name="e" placeholder="Votre courriel" aria-label="Votre courriel" required>
+        <button class="btn btn-y btn-sm" type="submit">Je m'inscris</button>
+      </form>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 Flowba.io. Tous droits réservés.</span>
+    <span><a href="#">Politique de confidentialité</a> · <a href="#">Conditions</a></span>
+  </div>
+</footer>
+
+<script>
+// Menu mobile
+const b=document.querySelector('.burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+// Boutons métier : préremplir le formulaire
+document.querySelectorAll('[data-metier]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('metier').value=a.dataset.metier}));
+// Formulaire : ouvre un courriel prérempli (à remplacer par Formspree / WordPress / CRM)
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target;
+  if(!f.prenom.value||!f.courriel.value){alert('Merci d\'indiquer votre prénom et votre courriel.');return}
+  const body=`Prénom : ${f.prenom.value}\nNom : ${f.nom.value}\nCourriel : ${f.courriel.value}\nTéléphone : ${f.tel.value}\nEntreprise : ${f.entreprise.value}\nMétier : ${f.metier.value}\n\nBesoin : ${f.besoin.value}`;
+  location.href='mailto:thebestofer@gmail.com?subject='+encodeURIComponent('Diagnostic IA gratuit - '+f.entreprise.value)+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
