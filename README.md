@@ -17,7 +17,8 @@ Page d'accueil statique (un seul fichier `index.html`, sans dépendance) pour fl
 12. Contact
 
 ## À compléter
-- Confirmer qu'Autos Discount et ICS Auto acceptent d'être nommés ; ajouter un vrai chiffre (demandes prises en charge par mois).
+- Autos Discount et ICS Auto : nommés avec l'accord de Bat. Ajouter un vrai chiffre (demandes prises en charge par mois).
+- ABQ Construction : client vitrine construction « en installation » ; passer à « En service » une fois en marche.
 - Ajouter « division de Global Richesses Humaines, fondée en 2012 » une fois le nom enregistré (note dans le pied de page).
 - Calendrier de formation, conditions de la garantie de l'audit.
 - Liens Facebook / Instagram / TikTok, politique de confidentialité (Loi 25).
