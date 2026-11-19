@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flowba | L'IA qui travaille pour votre PME</title>
-<meta name="description" content="Flowba branche des agents IA sur vos outils actuels : réponses aux clients 24/7, prise de rendez-vous, suivi des soumissions. Pour garages, entrepreneurs et courtiers immobiliers du Québec.">
+<title>Flowba | Réceptionniste IA pour garages et entrepreneurs</title>
+<meta name="description" content="Réceptionniste IA pour garages et entrepreneurs en construction du Québec : réponses 24/7, prise de rendez-vous, fiche de chaque demande. Dès 299 $ par mois, offre fondateurs de 10 places.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -183,28 +183,94 @@ footer a:hover{color:var(--text)}
   .hero-ctas .btn{width:100%}
   .news{flex-direction:column}
 }
+
+/* Preuve : déjà en service */
+.proof{padding:36px 0;border-bottom:1px solid var(--line)}
+.proof .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 28px;text-align:center}
+.proof .label{color:var(--muted);font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.1em}
+.proof .client{font-weight:900;font-size:1.3rem}
+.proof .live{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:800;font-size:.9rem}
+.proof .live::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(47,211,138,.2)}
+
+/* Fiches produits */
+.products{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.product{display:flex;flex-direction:column}
+.product .status{align-self:flex-start;font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;padding:5px 10px;border-radius:8px;margin-bottom:14px}
+.status.on{background:rgba(47,211,138,.15);color:var(--green)}
+.status.new{background:rgba(255,210,63,.15);color:var(--yellow)}
+.product .icon{font-size:2.2rem;margin-bottom:8px}
+.product .problem{color:var(--text)!important;font-weight:600;margin-bottom:14px!important}
+.product ol{margin:4px 0 20px;padding-left:22px;color:var(--muted)}
+.product ol li{margin-bottom:7px}
+.product ol li b{color:var(--text)}
+.showcase{margin:0 0 16px!important;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);font-size:.92rem}
+.showcase b{color:var(--text)}
+.showcase-logo{display:block;height:40px;width:auto;margin-bottom:10px}
+.showcase .stat{color:var(--text);font-weight:800}
+.showcase span{color:var(--green);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-left:6px}
+.product .from{border-top:1px solid var(--line);padding-top:16px;margin-bottom:18px;color:var(--muted);font-size:.95rem}
+.product .from b{color:var(--text);font-size:1.35rem;font-weight:900}
+.product .btn{margin-top:auto}
+.soon{margin-top:22px;text-align:center;color:var(--muted);font-size:.95rem}
+
+/* Boussole */
+.compass .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.compass svg{width:100%;max-width:440px;height:auto;margin:0 auto;display:block}
+.compass ol{list-style:none;counter-reset:b;padding:0;margin:22px 0 0}
+.compass ol li{counter-increment:b;position:relative;padding-left:46px;margin-bottom:16px;color:var(--muted)}
+.compass ol li b{color:var(--text)}
+.compass ol li::before{content:counter(b);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:10px;background:var(--yellow);color:#111;font-weight:900;display:grid;place-items:center}
+.rule{margin-top:22px;border-left:4px solid var(--red);padding:12px 18px;background:rgba(255,75,62,.08);border-radius:0 12px 12px 0;font-weight:700}
+
+/* Parcours */
+.path .step p{font-size:.95rem}
+
+/* Offre fondateurs */
+.founders{margin-top:34px;border:2px dashed var(--yellow);border-radius:var(--radius);padding:26px 28px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
+.founders h3{margin-bottom:8px}
+.founders p{color:var(--muted);margin:0}
+.seats{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.seats span{width:26px;height:26px;border-radius:8px;border:2px solid var(--yellow)}
+.was{color:var(--muted);text-decoration:line-through;font-size:.9rem;font-weight:600}
+.setup{text-align:center;color:var(--muted);margin-top:22px;font-size:.95rem}
+.setup b{color:var(--text)}
+
+/* Sur mesure et formation */
+.offer-list{list-style:none;padding:0;margin:16px 0 0}
+.offer-list li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:12px 0;color:var(--muted)}
+.offer-list li b{color:var(--text)}
+.offer-list li span{white-space:nowrap;font-weight:800;color:var(--yellow)}
+
+@media (max-width:960px){
+  .products,.compass .wrap,.founders{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .offer-list li{flex-direction:column;gap:2px}
+  .founders{padding:22px}
+  .seats{gap:4px}.seats span{width:20px;height:20px;border-radius:6px}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 
 <div class="ribbon">
-  🎁 Ce mois-ci : <strong>diagnostic IA gratuit de 30 minutes</strong> pour les garages, entrepreneurs et courtiers. <a href="#contact">Réservez votre place →</a>
+  🔥 Offre fondateurs : <strong>10 places seulement</strong>, tarif de lancement garanti 12 mois. <a href="#forfaits">Voir l'offre →</a>
 </div>
 
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="#">Flowba<span>.io</span></a>
     <ul id="menu">
-      <li><a href="#metiers">Pour qui</a></li>
       <li><a href="#solutions">Solutions</a></li>
-      <li><a href="#methode">Comment ça marche</a></li>
-      <li><a href="#forfaits">Forfaits</a></li>
+      <li><a href="#boussole">Notre méthode</a></li>
+      <li><a href="#forfaits">Prix</a></li>
+      <li><a href="#sur-mesure">Sur mesure et formation</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-cta">
       <a class="lang" href="#" title="English version (à venir)">EN</a>
-      <a class="btn btn-y btn-sm" href="#contact">Diagnostic gratuit</a>
+      <a class="btn btn-y btn-sm" href="#contact">Démo de 15 min</a>
       <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
     </div>
   </div>
@@ -212,22 +278,22 @@ footer a:hover{color:var(--text)}
 
 <main id="contenu">
 
-<!-- 1. HERO : promesse courte + preuves + un seul CTA principal -->
+<!-- 1. HERO : promesse + preuve + un seul CTA principal -->
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">IA et automatisation pour PME du Québec</span>
+      <span class="eyebrow">Réceptionniste IA pour garages et entrepreneurs</span>
       <h1>Arrêtez de perdre des clients <span class="hl-y">pendant que vous travaillez.</span></h1>
-      <p class="lead">Flowba branche un agent IA sur vos outils actuels. Il répond à vos clients 24/7, prend les rendez-vous et relance les soumissions. Vous, vous restez sous le char, sur le chantier ou en visite.</p>
+      <p class="lead">Votre réceptionniste IA répond à vos clients 24/7, prend les rendez-vous et vous envoie un résumé dans la minute. Vous, vous restez sous le char ou sur le chantier. Du compliqué au simple. Du simple à l'automatique.</p>
       <div class="hero-ctas">
-        <a class="btn btn-y" href="#contact">Réserver mon diagnostic gratuit</a>
-        <a class="btn btn-o" href="#solutions">Voir ce que ça fait</a>
+        <a class="btn btn-y" href="#contact">Réserver une démo de 15 minutes</a>
+        <a class="btn btn-o" href="#forfaits">Voir les prix</a>
       </div>
       <ul class="chips">
-        <li><b>24/7</b> réponses aux clients</li>
+        <li><b>Dès 299 $</b> par mois</li>
+        <li><b>Déjà en service</b> à Montréal</li>
         <li><b>En français</b> d'ici</li>
-        <li><b>Vos outils</b> restent en place</li>
-        <li><b>Pilote</b> avant d'investir gros</li>
+        <li><b>Vous approuvez</b> ce qui compte</li>
       </ul>
     </div>
     <div class="video-card">
@@ -237,85 +303,81 @@ footer a:hover{color:var(--text)}
   </div>
 </section>
 
-<!-- 2. DOULEURS : nommer le problème avant la solution -->
+<!-- 2. PREUVE : la preuve avant le discours -->
+<!-- Clients confirmés par Bat le 19 novembre 2026. À ajouter dès que possible : un vrai chiffre (ex. demandes prises en charge par mois). -->
+<div class="proof" aria-label="Clients actuels">
+  <div class="wrap">
+    <span class="label">Déjà en service chez</span>
+    <span class="client">Autos Discount</span>
+    <span class="client">ICS Auto</span>
+    <span class="client">ABQ Construction</span>
+    <span class="live">En service à Montréal</span>
+  </div>
+</div>
+
+<!-- 3. DOULEURS -->
 <section class="pains">
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">Ça vous dit quelque chose?</span>
-      <h2>Votre téléphone sonne. <span class="hl-r">Vous ne pouvez pas répondre.</span></h2>
-      <p class="lead">Le client n'attend pas. Il appelle le suivant. Et le soir, vous passez une heure à rattraper les messages.</p>
+      <h2>Le client appelle. <span class="hl-r">Vous ne pouvez pas répondre.</span></h2>
+      <p class="lead">Il n'attend pas : il appelle le suivant. Et le soir, au lieu de souper, vous rappelez dix messages vocaux.</p>
     </div>
     <div class="grid3" style="margin-top:44px">
-      <div class="card pain"><div class="big">📞</div><h3>Appels manqués</h3><p>Les mains pleines de graisse ou sur un toit, vous ne pouvez pas décrocher. Chaque appel manqué peut être un client perdu.</p></div>
-      <div class="card pain"><div class="big">💬</div><h3>Messages éparpillés</h3><p>Messenger, SMS, courriel, WhatsApp : les demandes arrivent partout et certaines tombent entre deux chaises.</p></div>
-      <div class="card pain"><div class="big">⏰</div><h3>Soirées de paperasse</h3><p>Confirmer les rendez-vous, relancer les soumissions, mettre l'agenda à jour… après une journée complète.</p></div>
+      <div class="card pain"><div class="big">📞</div><h3>Demandes manquées</h3><p>Les mains dans un moteur ou sur un toit, vous ne pouvez pas décrocher. Chaque demande sans réponse peut être un contrat perdu.</p></div>
+      <div class="card pain"><div class="big">🌙</div><h3>Soumissions le soir</h3><p>Les demandes arrivent le soir et la fin de semaine. On répond tard, ou pas du tout, et le client a déjà choisi quelqu'un d'autre.</p></div>
+      <div class="card pain"><div class="big">⏰</div><h3>Heures de paperasse</h3><p>Confirmer les rendez-vous, relancer les soumissions, mettre l'agenda à jour. Après une journée complète.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 3. POUR QUI : un parcours par métier -->
-<section id="metiers">
+<!-- 4. SOLUTIONS PRÊTES À L'EMPLOI : une fiche par métier -->
+<section id="solutions">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Pour qui</span>
-      <h2>Bâti pour votre métier, pas pour une multinationale.</h2>
-      <p class="lead">On commence par ce qui vous coûte le plus de temps dans <em>votre</em> journée.</p>
+      <span class="eyebrow">Solutions prêtes à l'emploi</span>
+      <h2>Un réceptionniste IA <span class="hl-y">bâti pour votre métier.</span></h2>
+      <p class="lead">Même base éprouvée, un scénario pensé pour votre réalité, un prix mensuel fixe.</p>
     </div>
-    <div class="grid3" style="margin-top:44px">
-      <article class="card trade">
+    <div class="products" style="margin-top:44px">
+      <article class="card product">
+        <span class="status on">● En service</span>
         <div class="icon">🔧</div>
-        <h3>Garages et ateliers</h3>
-        <p>Vos clients veulent un prix, une disponibilité, un rendez-vous. Tout de suite.</p>
-        <ul>
-          <li>Réponses aux questions courantes (heures, services, délais)</li>
-          <li>Prise de rendez-vous et rappels automatiques</li>
-          <li>Avis « votre auto est prête » par texto</li>
-        </ul>
-        <a class="btn btn-o" href="#contact" data-metier="Garage">Parler de mon garage</a>
+        <h3>Réceptionniste IA : garages et pneus</h3>
+        <p class="problem">Le problème : le client appelle pendant que vous avez les mains dans un moteur.</p>
+        <ol>
+          <li><b>Répond</b> tout de suite, avec vos heures, vos services et vos prix de base.</li>
+          <li><b>Comprend</b> la demande : réparation, entretien, changement de pneus.</li>
+          <li><b>Réserve</b> le rendez-vous dans votre agenda.</li>
+          <li><b>Confirme et rappelle</b> au client, et relance les pneus à chaque saison.</li>
+          <li><b>Vous résume</b> chaque demande. Le diagnostic et le prix d'une réparation restent au mécanicien.</li>
+        </ol>
+        <p class="from">À partir de <b>299 $</b> / mois<br>Deux rendez-vous sauvés par semaine paient le forfait.</p>
+        <a class="btn btn-o" href="#contact" data-metier="Garage">Voir une démo pour mon garage</a>
       </article>
-      <article class="card trade">
+      <article class="card product">
+        <span class="status new">● Lancement : 10 places fondateurs</span>
         <div class="icon">🏗️</div>
-        <h3>Entrepreneurs et rénovation</h3>
-        <p>Vous êtes sur le chantier pendant que les demandes de soumission s'empilent.</p>
-        <ul>
-          <li>Qualification des demandes (type de travaux, budget, délai)</li>
-          <li>Visites d'estimation ajoutées à votre agenda</li>
-          <li>Relance automatique des soumissions envoyées</li>
-        </ul>
-        <a class="btn btn-o" href="#contact" data-metier="Entrepreneur">Parler de mes chantiers</a>
-      </article>
-      <article class="card trade">
-        <div class="icon">🏡</div>
-        <h3>Courtiers immobiliers</h3>
-        <p>Un prospect qui attend deux heures, c'est un prospect qui appelle un autre courtier.</p>
-        <ul>
-          <li>Réponse instantanée aux demandes sur vos inscriptions</li>
-          <li>Prise de rendez-vous pour les visites</li>
-          <li>Suivi des acheteurs et vendeurs dans votre CRM</li>
-        </ul>
-        <a class="btn btn-o" href="#contact" data-metier="Courtier immobilier">Parler de mes inscriptions</a>
+        <h3>Réceptionniste IA : entrepreneurs en construction et rénovation</h3>
+        <p class="problem">Le problème : les demandes de soumission arrivent quand vous êtes sur le chantier.</p>
+        <!-- ABQ Construction : en service, confirmé par Bat le 19 novembre 2026. -->
+        <p class="showcase"><img class="showcase-logo" src="assets/abq-construction-logo.svg" alt="Logo ABQ Construction" width="128" height="40">Premier client vitrine : <b>ABQ Construction</b> <span class="on">● en service</span><br><strong class="stat">25 demandes prises en charge et 8 visites d'estimation réservées</strong> depuis la mise en service.</p>
+        <ol>
+          <li><b>Accueille</b> le client et l'informe que la conversation est enregistrée.</li>
+          <li><b>Trie</b> en une question : nouveau projet, suivi de chantier ou urgence. Une urgence vous est transférée tout de suite.</li>
+          <li><b>Qualifie</b> en 4 questions : type de travaux, ville, échéancier, budget.</li>
+          <li><b>Réserve</b> la visite d'estimation en proposant deux choix, puis envoie la confirmation par texto.</li>
+          <li><b>Vous envoie</b> une fiche complète dans la minute. Il ne donne jamais de prix : c'est vous qui le fixez.</li>
+        </ol>
+        <p class="from">À partir de <b>299 $</b> / mois<br>Un seul contrat récupéré peut payer l'année.</p>
+        <a class="btn btn-y" href="#contact" data-metier="Entrepreneur">Réserver ma place fondateur</a>
       </article>
     </div>
+    <p class="soon">Bientôt : courtiers immobiliers. <a href="#contact" data-metier="Courtier immobilier">Être avisé →</a></p>
   </div>
 </section>
 
-<!-- 4. SOLUTIONS -->
-<section id="solutions" class="pains">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Solutions</span>
-      <h2>Quatre agents. Un seul objectif : <span class="hl-y">plus de clients, moins de stress.</span></h2>
-    </div>
-    <div class="grid4" style="margin-top:44px">
-      <div class="card sol"><h3>💬 Agent service client</h3><p>Répond jour et nuit avec <b>vos</b> informations : heures, services, politiques. Passe la main à un humain quand c'est nécessaire.</p><div class="channels"><span>Messenger</span><span>SMS</span><span>WhatsApp</span><span>Site web</span></div></div>
-      <div class="card sol"><h3>🎯 Agent ventes</h3><p>Qualifie les prospects, répond aux questions sur vos produits et services, et amène le client à la prochaine étape.</p></div>
-      <div class="card sol"><h3>📅 Rendez-vous automatiques</h3><p>Réserve, confirme, rappelle. Votre agenda reste à jour sans que vous y touchiez.</p></div>
-      <div class="card sol"><h3>🔗 Flux connectés</h3><p>Relie votre CRM, votre agenda, votre boutique et vos outils pour que l'information circule toute seule.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. VOS VRAIS OUTILS (inspiré de « vos vrais dossiers ») -->
+<!-- 5. VOS VRAIS OUTILS + approbation humaine -->
 <section class="tools">
   <div class="wrap">
     <div>
@@ -323,123 +385,182 @@ footer a:hover{color:var(--text)}
       <h2>On branche l'IA sur <span class="hl-y">vos vrais outils.</span></h2>
       <p class="lead">Vous gardez votre agenda, votre CRM et vos habitudes. Flowba travaille par-dessus.</p>
       <ul class="checks">
-        <li><b>Données réelles seulement.</b> Les prix, disponibilités et dossiers viennent de vos systèmes. L'IA n'invente rien.</li>
-        <li><b>Un humain au besoin.</b> Les cas délicats vous sont transférés avec tout le contexte.</li>
-        <li><b>Vous gardez le contrôle.</b> Vous voyez chaque conversation et pouvez ajuster les réponses.</li>
+        <li><b>Données réelles seulement.</b> Heures, services et disponibilités viennent de vos systèmes. L'IA n'invente rien.</li>
+        <li><b>Vous approuvez ce qui compte.</b> Aucun prix, aucune soumission et aucune réponse à une plainte ne part sans vous.</li>
+        <li><b>Jamais de boucle frustrante.</b> Après deux incompréhensions, l'agent vous transfère l'appel ou prend un message.</li>
+        <li><b>Pensé pour la Loi 25.</b> Le client est informé dès le début, et vos données restent à vous.</li>
       </ul>
     </div>
     <div class="logos" aria-label="Exemples d'outils compatibles">
-      <div>Google Agenda</div><div>Outlook</div><div>Messenger</div>
-      <div>WhatsApp</div><div>SMS</div><div>Gmail</div>
-      <div>HubSpot</div><div>Shopify</div><div>Votre CRM</div>
+      <div>Téléphone</div><div>Textos</div><div>Google Agenda</div>
+      <div>Outlook</div><div>Messenger</div><div>Gmail</div>
+      <div>Formulaire web</div><div>Logiciel de garage</div><div>Votre CRM</div>
     </div>
   </div>
 </section>
 
-<!-- 6. MÉTHODE en 3 étapes -->
-<section id="methode">
+<!-- 6. LA BOUSSOLE IA : notre méthode -->
+<section id="boussole" class="compass">
+  <div class="wrap">
+    <div>
+      <svg viewBox="0 0 400 400" role="img" aria-labelledby="bt">
+        <title id="bt">La Boussole IA : l'entreprise d'aujourd'hui, la valeur créée par l'IA, et l'approbation humaine au centre</title>
+        <circle cx="200" cy="200" r="190" fill="#161f3d" stroke="#26305a" stroke-width="2"/>
+        <circle cx="200" cy="200" r="128" fill="#111831" stroke="#ffd23f" stroke-width="2"/>
+        <circle cx="200" cy="200" r="64" fill="#ffd23f"/>
+        <g fill="#a6afcf" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+          <text x="200" y="38">L'ENTREPRISE D'AUJOURD'HUI</text>
+          <text x="200" y="370" font-weight="500" font-size="12">Clients · Promesse · Canaux · Revenus · Coûts</text>
+        </g>
+        <g fill="#ffd23f" font-family="Inter,sans-serif" font-size="13" font-weight="800" text-anchor="middle">
+          <text x="200" y="118">LA VALEUR CRÉÉE PAR L'IA</text>
+          <text x="200" y="292" fill="#a6afcf" font-weight="500" font-size="12">Douleur · Employés IA · Rendement</text>
+        </g>
+        <g fill="#111" font-family="Inter,sans-serif" font-size="13" font-weight="900" text-anchor="middle">
+          <text x="200" y="195">APPROBATION</text>
+          <text x="200" y="213">HUMAINE</text>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <span class="eyebrow">Notre méthode : la Boussole IA</span>
+      <h2>Avant de vendre quoi que ce soit, <span class="hl-y">on regarde votre entreprise.</span></h2>
+      <p class="lead">Une page, trois anneaux, 45 minutes avec vous. Même structure pour toutes les entreprises : seul le contenu change.</p>
+      <ol>
+        <li><b>Votre entreprise aujourd'hui.</b> Qui vous servez, par où vos clients arrivent, ce qui rentre et ce qui coûte.</li>
+        <li><b>La douleur.</b> Ce qui vous fait perdre le plus de temps ou d'argent. On s'attaque à celle-là d'abord.</li>
+        <li><b>Les employés IA.</b> Quelles données, quels branchements, quel agent pour régler ce problème-là.</li>
+        <li><b>La frontière humaine.</b> On écrit noir sur blanc ce que l'IA ne décide jamais chez vous.</li>
+        <li><b>Le rendement.</b> Temps libéré par semaine, coût mensuel, retour attendu.</li>
+      </ol>
+      <p class="rule">Notre règle : si le rendement n'est pas clair, on ne vous vend rien.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PARCOURS : comment ça marche -->
+<section id="methode" class="pains path">
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">Comment ça marche</span>
-      <h2>Simple, rapide, sans risque.</h2>
-      <p class="lead">On commence petit, on mesure, et on grandit seulement si ça rapporte.</p>
+      <h2>Simple, rapide, mesuré.</h2>
+      <p class="lead">On commence par une démo courte, on branche, puis on mesure chaque mois.</p>
     </div>
     <div class="grid3 steps" style="margin-top:44px">
-      <div class="card step"><h3>Diagnostic gratuit</h3><span class="when">30 minutes</span><p>On regarde ensemble où vous perdez du temps et des clients. Vous repartez avec 2 ou 3 idées concrètes, même si vous ne faites pas affaire avec nous.</p></div>
-      <div class="card step"><h3>Projet pilote</h3><span class="when">Quelques semaines</span><p>On met en place un premier agent sur un seul problème clé, branché sur vos outils. On mesure les résultats.</p></div>
-      <div class="card step"><h3>On grandit ensemble</h3><span class="when">Quand ça rapporte</span><p>Si les résultats sont là, on ajoute d'autres agents. Sinon, vous n'êtes pas pris avec un gros contrat.</p></div>
+      <div class="card step"><h3>Démo gratuite</h3><span class="when">15 minutes</span><p>On vous montre l'agent en action et on pose les trois questions clés de la Boussole : votre douleur, ce que l'IA ne décide jamais, et le rendement attendu.</p></div>
+      <div class="card step"><h3>Mise en service</h3><span class="when">Quelques semaines</span><p>Configuration de la voix et du scénario, branchement à votre agenda, tests avec vous. Vous approuvez avant que le premier client l'entende.</p></div>
+      <div class="card step"><h3>Suivi mensuel</h3><span class="when">Chaque mois</span><p>Demandes prises en charge, rendez-vous réservés, ajustements. Vous voyez ce que ça rapporte, chiffres à l'appui.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 7. FORFAITS : une offre phare mise en avant -->
-<!-- NOTE POUR BAT : remplace « Sur soumission » par tes vrais prix quand ils sont fixés. -->
-<section id="forfaits" class="pains">
+<!-- 8. PRIX : offre fondateurs -->
+<!-- Prix tirés du document « Réceptionniste IA » de Bat (19 novembre 2026). -->
+<section id="forfaits">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Forfaits</span>
-      <h2>Un prix clair. Pas de surprise.</h2>
-      <p class="lead">Mise en place, puis un montant mensuel fixe. Les frais de tiers (textos, téléphonie) sont indiqués à part.</p>
+      <span class="eyebrow">Prix</span>
+      <h2>Un prix clair. <span class="hl-y">Affiché.</span></h2>
+      <p class="lead">Un montant mensuel fixe. À 299 $, votre réceptionniste IA coûte à peu près le prix d'un service de réponse téléphonique, mais il prend les rendez-vous.</p>
     </div>
     <div class="plans" style="margin-top:52px">
       <div class="card plan">
-        <h3>Départ</h3>
-        <p>Pour tester l'IA sur un seul canal.</p>
-        <div class="price">Sur soumission</div>
+        <h3>Base</h3>
+        <p>Pour ne plus manquer une demande.</p>
+        <div class="price">299 $ <small>/ mois</small></div>
+        <div class="was">Prix régulier : 400 à 500 $ / mois</div>
         <ul>
-          <li>1 agent service client</li>
-          <li>1 canal (Messenger, SMS ou site web)</li>
-          <li>Réponses basées sur vos infos</li>
-          <li>Rapport mensuel</li>
+          <li>Réceptionniste IA configuré pour votre métier</li>
+          <li>Jusqu'à 500 minutes de conversation par mois</li>
+          <li>Prise de rendez-vous dans votre agenda</li>
+          <li>Fiche de chaque demande envoyée dans la minute</li>
+          <li>Transfert des urgences</li>
         </ul>
-        <a class="btn btn-o" href="#contact">Demander un prix</a>
+        <a class="btn btn-o" href="#contact">Réserver ma démo</a>
       </div>
       <div class="card plan star">
-        <h3>Croissance</h3>
-        <p>Le combo qui ne laisse filer aucun client.</p>
-        <div class="price">Sur soumission</div>
+        <h3>Plus</h3>
+        <p>Pour ne laisser filer aucune soumission.</p>
+        <div class="price">499 $ <small>/ mois</small></div>
+        <div class="was">Prix régulier : 750 à 900 $ / mois</div>
         <ul>
-          <li>Agent service client + ventes</li>
-          <li>Tous vos canaux de messagerie</li>
-          <li>Prise de rendez-vous et rappels</li>
-          <li>Relance des soumissions</li>
-          <li>Ajustements mensuels inclus</li>
+          <li>Tout le forfait Base</li>
+          <li>Textos de confirmation et de rappel</li>
+          <li>Relance automatique des soumissions</li>
+          <li>Rapport mensuel des résultats</li>
         </ul>
-        <a class="btn btn-y" href="#contact">Réserver mon diagnostic</a>
+        <a class="btn btn-y" href="#contact">Réserver ma place fondateur</a>
       </div>
       <div class="card plan">
         <h3>Sur mesure</h3>
-        <p>Pour les entreprises avec plusieurs équipes ou outils.</p>
+        <p>Plusieurs agents, plusieurs équipes ou outils.</p>
         <div class="price">Sur soumission</div>
         <ul>
-          <li>Plusieurs agents et flux</li>
-          <li>Intégration CRM / boutique</li>
+          <li>Plusieurs employés IA et flux</li>
+          <li>Intégration CRM et logiciels métier</li>
           <li>Tableau de bord des résultats</li>
-          <li>Accompagnement prioritaire</li>
+          <li>Pilotage mensuel</li>
         </ul>
-        <a class="btn btn-o" href="#contact">Parler de mon projet</a>
+        <a class="btn btn-o" href="#sur-mesure">Voir le sur mesure</a>
       </div>
     </div>
-    <p class="compare">💡 À comparer avec le coût d'une réceptionniste à temps plein, ou d'<b>un seul client perdu</b> par semaine.</p>
+    <p class="setup">Mise en route : <b>750 $</b>, ou <b>0 $</b> avec un engagement de 12 mois <span class="was">(régulier : 1 500 à 2 500 $)</span>. Configuration, voix, agenda et tests inclus. Taxes en sus.</p>
+
+    <div class="founders">
+      <div>
+        <h3>🔥 Offre fondateurs : 10 places, pas une de plus</h3>
+        <p>Votre tarif de lancement est garanti pendant 12 mois. Le passage au prix régulier est annoncé dès la signature, sans surprise. En échange, on vous demande un témoignage honnête, écrit ou vidéo, après trois mois d'utilisation.</p>
+        <div class="seats" aria-label="10 places fondateurs"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="center">
+        <a class="btn btn-y" href="#contact">Je veux une place</a>
+      </div>
+    </div>
+    <p class="compare">💡 À comparer : une réceptionniste à temps partiel coûte environ <b>2 000 $ par mois</b>.</p>
   </div>
 </section>
 
-<!-- 8. FINANCEMENT / RÉASSURANCE -->
-<section>
+<!-- 9. SUR MESURE ET FORMATION -->
+<section id="sur-mesure" class="pains">
   <div class="wrap">
-    <div class="fund">
+    <div class="center">
+      <span class="eyebrow">Pour aller plus loin</span>
+      <h2>Sur mesure et formation.</h2>
+      <p class="lead">On apprend, on fait faire, puis on s'abonne. Pour les PME qui veulent automatiser plus qu'un poste.</p>
+    </div>
+    <div class="grid3" style="margin-top:44px">
+      <div class="card">
+        <h3>🧭 Atelier découverte</h3>
+        <p>Une demi-journée avec votre équipe : on cartographie une semaine type, on automatise une tâche en direct avec vos outils, et vous repartez avec vos trois prochains gains chiffrés.</p>
+        <ul class="offer-list"><li><b>Demi-journée</b><span>750 à 1 200 $</span></li><li>Déductible de l'audit si vous continuez</li></ul>
+      </div>
+      <div class="card">
+        <h3>🔍 Audit et mise en œuvre</h3>
+        <p>Votre Boussole IA complète, puis l'automatisation et la simplification de vos processus, et un pilotage mensuel avec tableau de bord.</p>
+        <ul class="offer-list"><li><b>Audit à prix fixe</b><span>moins de 2 500 $</span></li><li>Prix fixé d'avance pour chaque étape</li></ul>
+      </div>
+      <div class="card">
+        <h3>🥋 Formation par ceintures</h3>
+        <p>De la ceinture blanche (outils IA sans code, au quotidien) à la ceinture noire (analytique et prévision). Aucun prérequis. Aussi offerte en entreprise.</p>
+        <ul class="offer-list"><li><b>Calendrier</b><span>à venir</span></li><li>Résultats mesurés dès les premières semaines</li></ul>
+      </div>
+    </div>
+    <div class="fund" style="margin-top:44px">
       <div>
         <span class="eyebrow">Bon à savoir</span>
-        <h2>Votre projet pourrait être en partie financé.</h2>
-        <p class="lead">Des programmes d'aide au virage numérique existent pour les PME du Québec. Pendant le diagnostic, on vous indique lesquels vérifier et on vous fournit une description de projet claire pour votre demande.</p>
+        <h3>Votre projet pourrait être en partie financé.</h3>
+        <p class="lead" style="font-size:1rem">Des programmes d'aide au virage numérique existent pour les PME du Québec. On vous indique lesquels vérifier et on vous fournit une description de projet claire pour votre demande.</p>
         <p class="fine">Flowba ne garantit aucune aide financière. L'admissibilité est déterminée par les organismes qui gèrent ces programmes.</p>
       </div>
       <div>
         <ul class="checks">
-          <li><b>Soumission détaillée</b> et facture claire</li>
-          <li><b>Aucun engagement long terme</b> pour le pilote</li>
+          <li><b>Prix affichés</b> et facture claire</li>
+          <li><b>Engagement de 12 mois optionnel</b></li>
           <li><b>Vos données restent à vous</b></li>
           <li><b>Service en français</b>, ici au Québec</li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- 9. TÉMOIGNAGES -->
-<!-- NOTE POUR BAT : remplacer les cartes par de vrais témoignages (nom, métier, ville) dès qu'ils sont disponibles. Ne jamais inventer. -->
-<section class="pains">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Témoignages</span>
-      <h2>Leurs résultats parlent mieux que nous.</h2>
-    </div>
-    <div class="grid3" style="margin-top:44px">
-      <div class="card quote pilot"><h3>🔧 Garage</h3><p>Témoignage à venir.</p><div class="who">Premier projet pilote en cours</div></div>
-      <div class="card quote pilot"><h3>🏗️ Entrepreneur</h3><p>Votre entreprise ici?</p><div class="who">Places pilotes disponibles</div></div>
-      <div class="card quote pilot"><h3>🏡 Courtier</h3><p>Votre entreprise ici?</p><div class="who">Places pilotes disponibles</div></div>
-    </div>
-    <p class="compare">Les premières entreprises pilotes obtiennent un <b>tarif fondateur</b> en échange d'un témoignage honnête. <a href="#contact">Je veux une place →</a></p>
   </div>
 </section>
 
@@ -451,27 +572,28 @@ footer a:hover{color:var(--text)}
       <h2>Vos questions, nos réponses.</h2>
     </div>
     <div class="faq" style="margin-top:40px">
-      <details><summary>Je ne suis pas bon avec la technologie. Est-ce pour moi?</summary><p>Oui. C'est justement notre travail. On s'occupe de toute la mise en place. Vous, vous nous dites comment vous travaillez et vous validez les réponses.</p></details>
-      <details><summary>Est-ce que je dois changer mes logiciels?</summary><p>Non. Flowba se branche sur ce que vous utilisez déjà : agenda, Messenger, SMS, CRM, site web.</p></details>
-      <details><summary>Et si l'IA dit n'importe quoi à mon client?</summary><p>L'agent répond seulement à partir de vos informations. Les prix, disponibilités et dossiers viennent de vos systèmes. Quand il n'est pas sûr, il transfère à un humain.</p></details>
-      <details><summary>Combien de temps avant que ce soit en marche?</summary><p>Un premier pilote simple peut être en place en quelques semaines, selon vos outils et le nombre de canaux.</p></details>
-      <details><summary>Est-ce que ça parle français québécois?</summary><p>Oui, et anglais aussi. L'agent s'adapte à la langue du client et au ton de votre entreprise.</p></details>
-      <details><summary>Combien ça coûte?</summary><p>Une mise en place, puis un montant mensuel fixe. Le diagnostic gratuit sert justement à vous donner un prix précis pour votre situation.</p></details>
-      <details><summary>Qu'arrive-t-il à mes données?</summary><p>Elles restent à vous. On utilise uniquement ce qui est nécessaire pour répondre à vos clients, et vous pouvez tout récupérer en tout temps.</p></details>
+      <details><summary>Combien ça coûte?</summary><p>299 $ par mois pour le forfait Base, 499 $ pour le forfait Plus, au tarif fondateur garanti 12 mois. La mise en route coûte 750 $, ou 0 $ si vous vous engagez pour 12 mois.</p></details>
+      <details><summary>Qu'est-ce que l'IA ne décide jamais?</summary><p>Les prix, les diagnostics, les soumissions et toute réponse à une plainte restent à vous. On l'écrit noir sur blanc avec vous avant la mise en service.</p></details>
+      <details><summary>Et si l'IA dit n'importe quoi à mon client?</summary><p>L'agent répond seulement à partir de vos informations et ne donne jamais de prix. Après deux incompréhensions, il vous transfère ou prend un message.</p></details>
+      <details><summary>Je ne suis pas bon avec la technologie. Est-ce pour moi?</summary><p>Oui. On s'occupe de toute la mise en place. Vous nous dites comment vous travaillez et vous approuvez les réponses avant la mise en service.</p></details>
+      <details><summary>Est-ce que je dois changer mes logiciels?</summary><p>Non. Flowba se branche sur ce que vous utilisez déjà : téléphone, agenda, textos, courriel, CRM ou logiciel de garage.</p></details>
+      <details><summary>Est-ce que ça parle français québécois?</summary><p>Oui, et anglais aussi. Pendant la démo, vous entendez l'agent et vous jugez par vous-même.</p></details>
+      <details><summary>Et la Loi 25?</summary><p>Le client est informé dès le début de la conversation qu'elle est enregistrée. On utilise seulement les renseignements nécessaires pour vous servir, et vous pouvez tout récupérer en tout temps.</p></details>
+      <details><summary>Pourquoi seulement 10 places fondateurs?</summary><p>Pour bien accompagner chaque client au lancement. Le tarif est garanti 12 mois, en échange d'un témoignage honnête après trois mois.</p></details>
     </div>
   </div>
 </section>
 
-<!-- 11. CONTACT : deux portes d'entrée -->
+<!-- 11. CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
     <div>
       <span class="eyebrow">Parlons-en</span>
-      <h2>Réservez votre diagnostic IA gratuit.</h2>
-      <p class="lead">30 minutes, sans engagement. Vous repartez avec des idées concrètes pour sauver du temps dès cette semaine.</p>
+      <h2>Réservez votre démo de 15 minutes.</h2>
+      <p class="lead">Gratuit, sans engagement. Vous voyez l'agent en action et vous savez tout de suite si ça vaut la peine pour vous.</p>
       <div class="direct" style="margin-top:26px">
         <a href="tel:+15148235029"><span>📞</span><div>514 823-5029<small>Appelez ou textez-nous</small></div></a>
-        <a href="mailto:thebestofer@gmail.com?subject=Diagnostic%20IA%20gratuit"><span>✉️</span><div>Écrivez-nous<small>Réponse en 1 jour ouvrable</small></div></a>
+        <a href="mailto:thebestofer@gmail.com?subject=D%C3%A9mo%20Flowba%2015%20minutes"><span>✉️</span><div>Écrivez-nous<small>Réponse en 1 jour ouvrable</small></div></a>
         <a href="https://wa.me/15148235029" target="_blank" rel="noopener"><span>🟢</span><div>WhatsApp<small>Pour une réponse rapide</small></div></a>
       </div>
     </div>
@@ -487,11 +609,11 @@ footer a:hover{color:var(--text)}
       <label>Entreprise<input name="entreprise" autocomplete="organization"></label>
       <label>Votre métier
         <select name="metier" id="metier">
-          <option>Garage</option><option>Entrepreneur</option><option>Courtier immobilier</option><option>Autre</option>
+          <option>Garage</option><option>Entrepreneur</option><option>Courtier immobilier</option><option>Sur mesure ou formation</option><option>Autre</option>
         </select>
       </label>
-      <label>Qu'est-ce qui vous fait perdre le plus de temps?<textarea name="besoin" rows="4" placeholder="Ex. : je manque des appels quand je suis sous un char…"></textarea></label>
-      <button class="btn btn-y" type="submit">Réserver mon diagnostic gratuit</button>
+      <label>Qu'est-ce qui vous fait perdre le plus de temps?<textarea name="besoin" rows="4" placeholder="Ex. : je manque des appels quand je suis sur le chantier…"></textarea></label>
+      <button class="btn btn-y" type="submit">Réserver ma démo</button>
       <p class="fine" style="margin:0">Vos renseignements servent uniquement à vous recontacter. Ils ne sont jamais vendus.</p>
     </form>
   </div>
@@ -502,7 +624,7 @@ footer a:hover{color:var(--text)}
   <div class="wrap">
     <h2>Le prochain client qui appelle,<br><span class="hl-y">qui va lui répondre?</span></h2>
     <p class="lead">Avec Flowba, quelqu'un répond. Toujours.</p>
-    <div class="hero-ctas"><a class="btn btn-y" href="#contact">Réserver mon diagnostic gratuit</a><a class="btn btn-o" href="tel:+15148235029">514 823-5029</a></div>
+    <div class="hero-ctas"><a class="btn btn-y" href="#contact">Réserver une démo de 15 minutes</a><a class="btn btn-o" href="tel:+15148235029">514 823-5029</a></div>
   </div>
 </section>
 
@@ -512,11 +634,12 @@ footer a:hover{color:var(--text)}
   <div class="wrap">
     <div>
       <a class="logo" href="#">Flowba<span>.io</span></a>
-      <p>L'IA qui travaille pendant que vous travaillez. Automatisation pour les PME du Québec.</p>
+      <p>Du compliqué au simple. Du simple à l'automatique. IA et automatisation pour les PME du Québec.</p>
+      <!-- NOTE POUR BAT : une fois « Flow BA » enregistré comme autre nom de GRH, ajouter : « Flowba est une division de Global Richesses Humaines, fondée en 2012. » -->
     </div>
     <div>
       <h4>Navigation</h4>
-      <ul><li><a href="#metiers">Pour qui</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#forfaits">Forfaits</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+      <ul><li><a href="#solutions">Solutions</a></li><li><a href="#boussole">Notre méthode</a></li><li><a href="#forfaits">Prix</a></li><li><a href="#sur-mesure">Sur mesure et formation</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
     </div>
     <div>
       <h4>Suivez-nous</h4>
@@ -533,7 +656,7 @@ footer a:hover{color:var(--text)}
   </div>
   <div class="legal">
     <span>© 2026 Flowba.io. Tous droits réservés.</span>
-    <span><a href="#">Politique de confidentialité</a> · <a href="#">Conditions</a></span>
+    <span>Loi 25 : vos renseignements sont protégés. <a href="#">Politique de confidentialité</a> · <a href="#">Conditions</a></span>
   </div>
 </footer>
 
@@ -549,7 +672,7 @@ document.getElementById('form').addEventListener('submit',e=>{
   e.preventDefault();const f=e.target;
   if(!f.prenom.value||!f.courriel.value){alert('Merci d\'indiquer votre prénom et votre courriel.');return}
   const body=`Prénom : ${f.prenom.value}\nNom : ${f.nom.value}\nCourriel : ${f.courriel.value}\nTéléphone : ${f.tel.value}\nEntreprise : ${f.entreprise.value}\nMétier : ${f.metier.value}\n\nBesoin : ${f.besoin.value}`;
-  location.href='mailto:thebestofer@gmail.com?subject='+encodeURIComponent('Diagnostic IA gratuit - '+f.entreprise.value)+'&body='+encodeURIComponent(body);
+  location.href='mailto:thebestofer@gmail.com?subject='+encodeURIComponent('Démo Flowba 15 min - '+f.entreprise.value)+'&body='+encodeURIComponent(body);
 });
 </script>
 </body>
