@@ -18,7 +18,7 @@ Page d'accueil statique (un seul fichier `index.html`, sans dépendance) pour fl
 
 ## À compléter
 - Autos Discount et ICS Auto : nommés avec l'accord de Bat. Ajouter un vrai chiffre (demandes prises en charge par mois).
-- ABQ Construction : client vitrine construction, en service (confirmé par Bat). Ajouter un résultat chiffré et le logo.
+- ABQ Construction : client vitrine construction, en service (confirmé par Bat). Résultat affiché : 25 demandes, 8 visites réservées depuis la mise en service. Logo à ajouter.
 - Ajouter « division de Global Richesses Humaines, fondée en 2012 » une fois le nom enregistré (note dans le pied de page).
 - Calendrier de formation, conditions de la garantie de l'audit.
 - Liens Facebook / Instagram / TikTok, politique de confidentialité (Loi 25).
