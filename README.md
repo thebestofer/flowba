@@ -5,7 +5,7 @@ Page d'accueil statique (un seul fichier `index.html`, sans dépendance) pour fl
 ## Structure (mise à jour du 19 novembre 2026, selon les documents stratégiques de Bat)
 1. Bandeau : offre fondateurs (10 places, tarif garanti 12 mois)
 2. Hero : réceptionniste IA + vidéo + CTA « Réserver une démo de 15 minutes »
-3. Preuve : déjà en service chez Autos Discount et ICS Auto
+3. Preuve : déjà en service chez Autos Discount, ICS Auto et ABQ Construction
 4. Douleurs (demandes manquées, soumissions le soir, paperasse)
 5. Solutions prêtes à l'emploi : une fiche par métier (garages en service, construction en lancement), courtiers « bientôt »
 6. Vos vrais outils + approbation humaine + Loi 25
@@ -18,7 +18,7 @@ Page d'accueil statique (un seul fichier `index.html`, sans dépendance) pour fl
 
 ## À compléter
 - Autos Discount et ICS Auto : nommés avec l'accord de Bat. Ajouter un vrai chiffre (demandes prises en charge par mois).
-- ABQ Construction : client vitrine construction « en installation » ; passer à « En service » une fois en marche.
+- ABQ Construction : client vitrine construction, en service (confirmé par Bat). Ajouter un résultat chiffré et le logo.
 - Ajouter « division de Global Richesses Humaines, fondée en 2012 » une fois le nom enregistré (note dans le pied de page).
 - Calendrier de formation, conditions de la garantie de l'audit.
 - Liens Facebook / Instagram / TikTok, politique de confidentialité (Loi 25).
